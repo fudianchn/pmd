@@ -24,11 +24,25 @@ import net.sourceforge.pmd.reporting.RuleContext;
  */
 public class CommentSizeRule extends AbstractJavaRulechainRule {
 
+    /**
+     * Maximum number of lines that a single comment block may span. This is a rough
+     * size check only: a line count cannot distinguish useful documentation from
+     * filler, the default value is a rule of thumb rather than a research-backed
+     * threshold, and an arbitrary cap can discourage writing valuable comments.
+     * Consider whether this property is useful for your project, or rely on
+     * {@link #MAX_LINE_LENGTH} alone. See
+     * <a href="https://github.com/pmd/pmd/issues/2265">#2265</a>.
+     */
     public static final PropertyDescriptor<Integer> MAX_LINES
         = PropertyFactory.intProperty("maxLines")
                          .desc("Maximum lines")
                          .require(positive()).defaultValue(6).build();
 
+    /**
+     * Maximum number of characters a single comment line may have. Lines that
+     * exceed this length hurt readability because they require horizontal scrolling
+     * in editors and source viewers.
+     */
     public static final PropertyDescriptor<Integer> MAX_LINE_LENGTH
         = PropertyFactory.intProperty("maxLineLength")
                          .desc("Maximum line length")

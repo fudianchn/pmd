@@ -54,7 +54,7 @@ Denotes whether javadoc (formal) comments are required (or unwanted) for specifi
           class="net.sourceforge.pmd.lang.java.rule.documentation.CommentSizeRule"
           externalInfoUrl="${pmd.website.baseurl}/pmd_rules_java_documentation.html#commentsize">
         <description>
-Determines whether the dimensions of non-header comments found are within the specified limits.
+This rule flags comments that are considered too large. The maxLineLength property addresses a genuine readability concern, since overly long lines require horizontal scrolling in editors and source viewers. The maxLines property is a rough size check only: it cannot distinguish useful documentation from filler, its default (6) is a rule of thumb rather than a research-backed threshold, and an arbitrary line cap can discourage writing valuable documentation. Comments before the first declaration (e.g. license/copyright headers) are not checked.
         </description>
         <priority>3</priority>
         <example>

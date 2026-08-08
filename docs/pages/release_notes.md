@@ -76,6 +76,7 @@ Note: Type data is not yet accessible in XPath rules or the PMD Rule Designer. T
     * [#6844](https://github.com/pmd/pmd/issues/6844): \[java] AvoidThrowingNewInstanceOfSameException: message inconsistent with logic
     * [#6881](https://github.com/pmd/pmd/issues/6881): \[java] CognitiveComplexity does not count switch expressions
 * java-documentation
+    * [#2265](https://github.com/pmd/pmd/issues/2265): \[java] CommentSize: Document the rationale and limitations of the maxLines property.
     * [#6270](https://github.com/pmd/pmd/issues/6270): \[java] CommentSize: Skip file header comments.
 * java-errorprone
     * [#6742](https://github.com/pmd/pmd/issues/6742): \[java] CloseResource: False positive when a correctly-closed resource is declared without initializer 
